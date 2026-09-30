@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sample.generic.v1",
+  "type": "object",
+  "required": ["storage_condition", "volume_mL", "collection_method"],
+  "properties": {
+    "storage_condition": {"type": "string", "enum": ["-80C", "-20C", "4C", "RT"]},
+    "volume_mL": {"type": "number", "minimum": 0.01, "maximum": 5000},
+    "collection_method": {"type": "string", "minLength": 1},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

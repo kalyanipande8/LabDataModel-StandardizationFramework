@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "experiment.purity.v1",
+  "type": "object",
+  "required": ["assay_method", "column_lot", "mobile_phase", "operator_initials"],
+  "properties": {
+    "assay_method": {"type": "string", "enum": ["SEC-HPLC", "CE-SDS", "RP-HPLC"]},
+    "column_lot": {"type": "string", "minLength": 1},
+    "mobile_phase": {"type": "string", "minLength": 1},
+    "operator_initials": {"type": "string", "minLength": 2, "maxLength": 4},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

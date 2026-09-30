@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "experiment.titer.v1",
+  "type": "object",
+  "required": ["assay_method", "dilution_factor", "temperature_c", "operator_initials"],
+  "properties": {
+    "assay_method": {"type": "string", "enum": ["Protein A HPLC", "Octet BLI", "ELISA"]},
+    "dilution_factor": {"type": "number", "minimum": 1, "maximum": 1000},
+    "temperature_c": {"type": "number", "minimum": 2, "maximum": 40},
+    "operator_initials": {"type": "string", "minLength": 2, "maxLength": 4},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
